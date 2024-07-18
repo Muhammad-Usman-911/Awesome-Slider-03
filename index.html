@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>SAVE YOUR IMPORTANT DATA HERE WITH PICTURE</h3>
+
+    <div class="slider">
+        <div class="cardContainer">
+            <div class="cards">
+                <div class="cover"></div>
+                <img src="image/bike.jpg" alt="">
+                <div class="content">
+                    <h1>Heading</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti adipisci quibusdam laudantium.
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cover"></div>
+                <img src="image/car1.jpg" alt="">
+                <div class="content">
+                    <h1>Heading</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti adipisci quibusdam laudantium. 
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cover"></div>
+                <img src="image/city.jpg" alt="">
+                <div class="content">
+                    <h1>Heading</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti adipisci quibusdam laudantium. 
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cover"></div>
+                <img src="image/john wick.jpg" alt="">
+                <div class="content">
+                    <h1>Heading</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti adipisci quibusdam laudantium. 
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cover"></div>
+                <img src="image/lady.jpg" alt="">
+                <div class="content">
+                    <h1>Heading</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque deleniti adipisci quibusdam laudantium. 
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="addButton">
+            <button class="bookmarkBtn" onclick="showForm()">
+                <span class="IconContainer">
+                  <span class="icon">
+                  +
+                  </span>
+                </span>
+                <p class="text">Add</p>
+              </button>
+              
+        </div>   
+    </div>
+<!-- Add form modal -->
+<div id="formModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeForm()"><p>Close</p></span>
+        
+        <form id="addForm">
+
+            <div class="radio-input">
+                <input type="radio" id="value-1" name="imageSource" value="url" checked>
+                <label for="value-1">Image URL</label>
+                <input  type="radio" name="imageSource" value="file" id="value-2">
+                <label for="value-2">Upload Image</label>
+            </div>
+            <div id="urlInput">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl">
+            </div>
+            <div id="fileInput" style="display: none;">
+                <label class="borwseImage" for="imageFile">
+                    <span>Browse Image</span>
+                    <div class="r-box">
+                        <div class="row-box">
+                            <button class="browseImage_button" type="button" for="imageFile" id="browseButton">
+                                <div class="browseImage_container">
+                                    <div class="browseImage_folder browseImage_folder_one"></div>
+                                    <div class="browseImage_folder browseImage_folder_two"></div>
+                                    <div class="browseImage_folder browseImage_folder_three"></div>
+                                    <div class="browseImage_folder browseImage_folder_four"></div>
+                                </div>
+                                <div class="browseImage_active_line"></div>
+                                <span class="browseImage_text">File Explorer</span>
+                            </button>
+                            <span id="fileName">No File Here...</span>
+                        </div>
+                    </div>
+                </label>
+                
+                <input type="file" id="imageFile" name="imageFile" accept="image/*">
+            </div>
+            <label for="heading">Heading:</label>
+            <input type="text" id="heading" name="heading" required>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required></textarea>
+            <button type="submit" class="shinny-button btn-shine">
+                <span>ADD NEW CARD</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
